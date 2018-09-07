@@ -1,0 +1,142 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/04/2018, 07:34:54 PM
+    Author     : JosÃ© RÃ­os
+*/
+body{
+    background: url(Fondo.png);
+    background-size: 1400px;
+}
+.panel-lateral{
+    background: #f4f4f4;
+    display: flex;
+    position: fixed;
+    left: 0%;
+    top:0%;
+    width: 226px;
+    height: 100%;
+    text-align: center;
+}
+.panel-central{
+    display: flex;
+    position: absolute;
+    left: 25%;
+    top:0%;
+    width: 800px;
+    text-align: center;
+}
+.userName{
+    font-family: Arial;
+    font-size: 20px;
+    display: flex;
+    position: absolute;
+    top:3%;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+}
+.actual{
+    font-family: Arial;
+    font-size: 20px;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    top:20%;
+    width: 226px;
+    text-decoration: none;
+    color: #000000;
+
+}
+.opcion{
+    font-family: Arial;
+    font-size: 20px;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    width: 226px;
+    text-decoration: none;
+    color: #000000;
+}
+.cerrar{
+    font-family: Arial;
+    font-size: 20px;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    width: 226px;
+    text-decoration: none;
+    top: 580px;
+    left:55px;
+}
+#opcion1{
+    top: 30%;
+}
+#opcion2{
+    background: #bbbbbb;
+    top: 40%;
+}
+#opcion3{
+    top: 50%;
+}
+#opcion4{
+    top: 70%;
+}
+#salir{
+    font-family: Arial;
+    font-size: 20px;
+    display: flex;
+    position: absolute;
+    top:90%;
+    text-align: center;
+    background: #ffdc5e;
+    width: 150px;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.busqueda{
+    background: #ffdc5e;
+    display: flex;
+    position: absolute;
+    left: 0%;
+    top:0%;
+    width: 680px;
+    text-align: center;
+}
+.barra-busqueda{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 190px;
+    width: 300px;
+    border-style: none;
+    color: #ffffff;
+    background: #5b5b5b;
+    border-radius: 3px;
+    font-family: arial;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#icono-buscar{
+    display: flex;
+    position: absolute;
+    top: 12px;
+    left: 500px;
+}
+.banner{
+    position: absolute;
+    display: flex;
+    width: 680px;
+    top:60px;
+}
+.etiqueta{
+    font-size: 25px;
+    font-family: Arial;
+    position: absolute;
+    display: flex;
+    top: 340px;
+    left: 20px
+}

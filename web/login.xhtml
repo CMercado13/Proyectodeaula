@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Iniciar Sesión | Reses</title>
+        <link href="Estilos/loginCSS.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"/>
+    </h:head>
+    <h:body>
+        <nav>
+            <img class="r" src="Images/R.png" alt=""/>
+            <a href="http://www.facebook.com" class="btnFacebook"><i class="fab fa-facebook-square"></i></a>
+            <a href="http://www.twitter.com" class="btnTwitter"><i class="fab fa-twitter-square"></i></a>
+            <a href="http://www.instagram.com" class="btnInstagram"><i class="fab fa-instagram"></i></a>
+            <a href="http://www.youtube.com" class="btnYoutube"><i class="fab fa-youtube"></i></a>
+            <a class="share"><i class="fas fa-question-circle"></i>&nbsp; Acerca de</a>
+            <a class="about"><i class="fas fa-share-alt-square"></i>&nbsp; Compartir</a>
+        </nav>
+        <h:form class="formulario">
+            <div>
+                <p class="titulo">Iniciar Sesión</p>
+                <p class="etiqueta">*Código &nbsp; 
+                    <h:inputText class="input1" id="user" 
+                                 value="#{login.user}" p:required="true">
+                                 <f:validateLength minimum="4" maximum="10"/>                                          
+                    </h:inputText></p>
+                <p class="etiqueta">*Contraseña &nbsp; 
+                    <h:inputSecret class="input1" id="password" 
+                                   value="#{login.password}" p:required="true" redisplay="true"> 
+                        <f:validateLength id="v1" minimum="4" maximum="15"/>
+                    </h:inputSecret></p>
+                <h:commandButton id="login" class="btn1"
+                             value="Iniciar Sesión"
+                             action="#{login.validation()}" />
+                <p class="con">Campo obligatorio  *</p>
+            </div>
+        </h:form>
+        <h:form class="formulario2">            
+            <p class="restaurar" style="font-size: 15px">¿Has olvidado tu contraseña? &nbsp;<h:commandLink action="recuperar" value="Restaurar"></h:commandLink></p>
+            <p class="registrar">¿Aún no tienes una cuenta? &nbsp;<h:commandLink action="sigin" value="Regístrate"></h:commandLink></p>
+        </h:form>
+        <footer>
+            <p class="IES">Esta plataforma es proporcionada actualmente para</p>
+            <img class="logo" src="Images/comfenalco.png" alt=""/>
+            
+            <p class="idioma">Español (Colombia)</p>
+            <p class="copyright">Copyright  © 2018 - Todos los derechos reservados</p>
+        </footer>
+    </h:body>
+</html>

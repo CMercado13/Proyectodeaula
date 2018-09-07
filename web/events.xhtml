@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Amigos | Reses</title>
+        <link href="Estilos/eventsCSS.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+    </h:head>
+    <h:body style="font-family:tahoma">
+        <h:form id="form2">
+            <div class="panel-lateral">
+                <a href="porfile.xhtml" class="userName">#{UsuarioBean.pedirNombre()}&nbsp;<i class="fas fa-user-circle"></i></a>
+                <a href="inicio.xhtml" class="actual">Inicio &nbsp; <i class="fas fa-home"></i> </a>
+                <a href="events.xhtml" class="opcion" id="opcion1">Eventos y Actividades &nbsp; <i class="fas fa-calendar-check"></i> </a>
+                <a href="friends.xhtml" class="opcion" id="opcion2">Amigos &nbsp; <i class="fas fa-hands-helping"></i> </a>
+                <a href="find a place.xhtml" class="opcion" id="opcion3">Encuentra un lugar &nbsp; <i class="fas fa-map-pin"></i> </a>
+                <a href="settings.xhtml" class="opcion" id="opcion4">Configuración &nbsp; <i class="fas fa-cogs"></i> </a>
+                <p class="cerrar"><h:commandLink action="login" actionListener="#{login.cerrarSesion()}" id="salir"
+                                  style="font-size: 20px;color: blue" value="Cerrar sesión"/>&nbsp; <i class="fas fa-power-off"></i></p>
+            </div>
+        </h:form>
+            <div class="panel-central">
+                <h:form id="form" style="width:70%">
+                    <p:growl autoUpdate="true" id="msg" showDetail="true"></p:growl>
+                    <p:panel  header="Publicar eventos" toggleable="true" style="background-color: #ade3ff">
+                        <f:facet name="footer" >
+                            <p:commandButton update="msg" actionListener="#{eventotBean.guardarEvento()}" 
+                                             value="Publicar" icon="ui-icon-disk" iconPos="left"
+                                             style=" background-color: #c6c6c6; font-size: 15px; color: #000000; border-radius: 5px; border-style: none;">
+                            </p:commandButton>
+                        </f:facet>
+                        <p:panelGrid columns="2">
+                            <p:outputLabel for="nomEve">* Nombre Evento</p:outputLabel>
+                            <p:inputText id="nomEve" value="#{eventotBean.evento.nombreEve}"></p:inputText>
+                            <p:outputLabel for="descEve">* Descripción de Evento</p:outputLabel>
+                            <p:inputText id="descEve" value="#{eventotBean.evento.descripcionEve}" maxlength="2999"></p:inputText>
+                            <h:outputLabel for="acceEve" value="Acceso:"/>
+                            <p:selectOneMenu id="acceEve" value="#{eventotBean.evento.accesoEve}" style="width:125px">
+                                <f:selectItem itemLabel="" itemValue="" />
+                                <f:selectItem itemLabel="Privado" itemValue="Privado" />
+                                <f:selectItem itemLabel="Publico" itemValue="Publico" />
+                            </p:selectOneMenu>
+                            <h:outputLabel for="partiEve" value="* Participantes:"/>
+                            <p:inputText id="partiEve" value="#{eventotBean.evento.participantesEve}" maxlength="49"></p:inputText>
+                            <h:outputLabel for="lugarEve" value="* Lugar:"/>
+                            <p:inputText id="lugarEve" value="#{eventotBean.evento.lugarEve}" maxlength="199"></p:inputText>
+                            <p:outputLabel for="fechaEve">* Fecha del evento</p:outputLabel>
+                            <p:calendar id="fechaEve" value="#{eventotBean.evento.fechaEve}" label="Fecha" mindate="today">                        
+                            </p:calendar>
+                        </p:panelGrid>
+                    </p:panel>
+                </h:form>
+                <h:form id="form1" style="width:300%">
+                    <p:growl autoUpdate="true" id="lis" showDetail="true"></p:growl>
+                        <p:panel style="width:100%">                            
+                            <p:dataScroller value="#{eventotBean.listaEve}" var="eve" chunkSize="10" id="datos">
+                            <f:facet name="header">
+                                <h:outputText value="Eventos publicados" style=" background-color: #c6c6c6; font-size: 20px; color: #000000; border-radius: 5px; border-style: none;" />
+                            </f:facet>
+                                
+                            <h:panelGrid columns="2" style="width:100%; background-color: rgba(247,255,0,0.4); 
+                                         border-radius: 10px" columnClasses="logo,detail" >
+                                <p:outputPanel>
+                                    <h:panelGrid columns="2" cellpadding="5" style="font-family: Arial">
+                                        <h:outputText value="Nombre del evento:" />
+                                        <h:outputText value="#{eve.nombreEve}" style="font-weight: bold"/>
+
+                                        <h:outputText value="Descripción:" />
+                                        <h:outputText value="#{eve.descripcionEve}" style="font-weight: bold"/>
+
+                                        <h:outputText value="Fecha de realización:" />
+                                        <h:outputText value="#{eve.fechaEve}" style="font-weight: bold"/>
+
+
+                                        <h:outputText value="Participantes:" />                        
+                                        <h:outputText value="#{eve.participantesEve}" style="font-weight: bold"/>
+
+
+                                        <h:outputText value="Lugar:" />
+                                        <h:outputText value="#{eve.lugarEve}" style="font-weight: bold"/>
+
+
+                                        <h:outputText value="Privacidad:" />
+                                        <h:outputText value="#{eve.accesoEve}" style="font-weight: bold"/>
+                                        
+                                        <p:separator/> <p:separator/>    
+                                    </h:panelGrid>
+                                </p:outputPanel>
+                            </h:panelGrid>
+                        </p:dataScroller>
+                        </p:panel>
+            </h:form>
+            </div>
+    </h:body>
+</html>

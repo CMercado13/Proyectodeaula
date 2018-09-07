@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+        <title>Encuentra un lugar | Reses</title>
+        <link href="Estilos/find a placeCSS.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"/>
+        <link href="Estilos/find a placeCSS.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form>
+            <div class="panel-lateral">
+                <a href="porfile.xhtml" class="userName">#{UsuarioBean.pedirNombre()}&nbsp;<i class="fas fa-user-circle"></i></a>
+                <a href="inicio.xhtml" class="opcion" id="opcion3">Inicio &nbsp; <i class="fas fa-home"></i> </a>
+                <a href="events.xhtml" class="opcion" id="opcion1" >Eventos y Actividades &nbsp; <i class="fas fa-calendar-check"></i> </a>
+                <a href="friends.xhtml" class="opcion" id="opcion2">Amigos &nbsp; <i class="fas fa-hands-helping"></i> </a>
+                <a href="find a place.xhtml" class="actual" >Encuentra un lugar &nbsp; <i class="fas fa-map-pin"></i> </a>
+                <a href="settings.xhtml" class="opcion" id="opcion4">Configuración &nbsp; <i class="fas fa-cogs"></i> </a>
+                <p class="cerrar"><h:commandLink action="login" actionListener="#{login.cerrarSesion()}" id="salir"
+                                                 style="font-size: 20px;color: blue" value="Cerrar sesión"/>&nbsp; <i class="fas fa-power-off"></i></p>
+            </div>
+            <div class="panel-central">
+                <div class="busqueda">
+                    <h:inputText class="barra-busqueda"></h:inputText>
+                    <i class="fas fa-search" id="icono-buscar"></i>
+                </div>
+                <img class="sedes" id="sedeA" src="Images/sedeA.png" alt=""/>
+                <img class="sedes" id="sedeB" src="Images/sedeB.png" alt=""/>
+                <img class="sedes" id="sedeC" src="Images/sedeC.png" alt=""/>
+                <!--sede a-->
+                <p class="A">SEDE A: Barrio España</p>
+                <p><br/><a class="SAP1" href="Mapas/MapaSedeA-Piso1.html">Mapa Piso 1</a></p>
+                <p><br/><a class="SAP2" href="Mapas/MapaSedeA-Piso2.html">Mapa Piso 2</a></p>
+                <p><br/><a class="SAP3" href="Mapas/MapaSedeA-Piso3.html">Mapa Piso 3</a></p>
+                <p><br/><a class="SAP4" href="Mapas/MapaSedeA-Piso4.html">Mapa Piso 4</a></p>
+                <!--sede b-->
+                <p class="B">SEDE B: Cedesarrollo</p>
+                <p><br/><a class="SB" id="SBP1" href="Mapas/MapaSedeA-Piso1.html">Mapa Piso 1</a></p>
+                <p><br/><a class="SB"  id="SBP2" href="Mapas/MapaSedeA-Piso1.html">Mapa Piso 2</a></p>
+                <p><br/><a class="SB"  id="SBP3" href="Mapas/MapaSedeA-Piso1.html">Mapa Piso 3</a></p>
+                <p><br/><a class="SB"  id="SBP4" href="Mapas/MapaSedeA-Piso1.html">Mapa Piso 4</a></p>
+                <p><br/><a class="SB"  id="SBP5" href="Mapas/MapaSedeA-Piso1.html">Mapa Piso 5</a></p>
+                <p><br/><a class="SB"  id="SBP6" href="Mapas/MapaSedeA-Piso1.html">Mapa Piso 6</a></p>
+
+                <p class="C">SEDE C: Zaragocilla</p>
+            </div>
+        </h:form>
+    </body>
+</html>

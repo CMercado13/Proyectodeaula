@@ -1,0 +1,21 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Interfaces;
+
+import java.util.List;
+
+/**
+ *
+ * @author HP
+ * @param <Evento>
+ */
+public interface InterEvento <Evento>{
+    void guardar(Evento e);
+    void actualizar(Evento e);
+    void eliminar(Evento e);
+    List<Evento>listar();   
+    
+}

@@ -1,0 +1,134 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1/05/2018, 10:25:06 AM
+    Author     : JosÃ© RÃ­os
+*/
+#fondo{
+    position: absolute;
+    display: flex;
+    z-index: 0;
+}
+#titulo{
+    width:808px;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    top:10px;
+    left:481px;
+}
+#logo{
+    width:470px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top:10px;
+    left:8px;
+}
+#marco{
+    width:1183px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 233px;
+    left: 34px
+}
+#rampa{
+    width:173px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 225px;
+    left: 50px
+}
+#banoh{
+    width: 68px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 225px;
+    left: 238px
+}
+#banom{
+    width: 68px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 225px;
+    left: 319px
+}
+#derecho{
+    width: 65px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 371px;
+    left: 406px
+}
+#escalera{
+    width: 45px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 260px;
+    left: 158px
+}
+#escalera2{
+    width: 49px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 248px;
+    left: 514px
+}
+#invExt{
+    width: 65px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 395px;
+    left: 641px
+}
+#ramon{
+    width: 66px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 368px;
+    left: 967px
+}
+#rectoria{
+    width: 213px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 348px;
+    left: 38px
+}
+#secretaria{
+    width: 65px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 315px;
+    left: 406px
+}
+#talentoH{
+    width: 65px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 315px;
+    left: 505px
+}
+#aseo{
+    width: 25px;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    top: 228px;
+    left: 395px
+}

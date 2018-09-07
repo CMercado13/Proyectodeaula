@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Perfil de Usuario | Reses</title>
+        <link href="Estilos/porfileCSS.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div class="panel-lateral">
+                <a href="porfile.xhtml" class="userName">#{UsuarioBean.pedirNombre()}&nbsp;<i class="fas fa-user-circle"></i></a>
+                <a href="inicio.xhtml" class="actual">Inicio &nbsp; <i class="fas fa-home"></i> </a>
+                <a href="events.xhtml" class="opcion" id="opcion1">Eventos y Actividades &nbsp; <i class="fas fa-calendar-check"></i> </a>
+                <a href="friends.xhtml" class="opcion" id="opcion2">Amigos &nbsp; <i class="fas fa-hands-helping"></i> </a>
+                <a href="find a place.xhtml" class="opcion" id="opcion3">Encuentra un lugar &nbsp; <i class="fas fa-map-pin"></i> </a>
+                <a href="settings.xhtml" class="opcion" id="opcion4">Configuración &nbsp; <i class="fas fa-cogs"></i> </a>
+                <p class="cerrar"><h:commandLink action="login" actionListener="#{login.cerrarSesion()}" id="salir"
+                                  style="font-size: 20px;color: blue" value="Cerrar sesión"/>&nbsp; <i class="fas fa-power-off"></i></p>
+            </div>
+            <div class="panel-central">
+                <i id="foto"> <h:graphicImage value="/Avatares/#{login.imagenAleatoria()}.png" style="width: 80px; height: 80px" /></i>
+                <p class="pie"><h:commandLink actionListener="#{login.imagenAleatoria()}"
+                               style="font-size: 15px;color: black" value="Cambiar foto"/></p>
+                <p class="name">#{login.cargarUsuario(usu).getNombre()}</p>
+                <p class="user">&nbsp;<i class="far fa-id-badge"></i>&nbsp; #{login.cargarUsuario(usu).getCodigo()}</p>
+                <p class="tipo">&nbsp;<i class="fas fa-user-check"></i>&nbsp; #{login.cargarUsuario(usu).getTipoU()}</p>              
+                <p class="etiqueta"><b>Informacion Privada</b></p>
+
+                <p class="mail">&nbsp;<i class="far fa-envelope"></i>&nbsp; #{login.cargarUsuario(usu).getCorreo()}</p>
+                <p class="tel">&nbsp;<i class="fas fa-mobile-alt"></i>&nbsp; #{login.cargarUsuario(usu).getTel()}</p>
+
+                <p class="editar"><i class="far fa-edit"></i>&nbsp; <h:commandLink 
+                        style="font-size: 15px;color: black" value="Editar información" action="editarUsuario"/></p>
+            </div>
+            <!--<div class="panel-derecho">
+            
+            </div>-->
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,294 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1/05/2018, 10:25:06 AM
+    Author     : JosÃ© RÃ­os
+*/
+#fondo{
+    position: absolute;
+    display: flex;
+    z-index: 0;
+}
+#titulo{
+    width:808px;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    top:10px;
+    left:481px;
+}
+#logo{
+    width:470px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top:10px;
+    left:8px;
+}
+#marco{
+    width:1226px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 237px;
+    left: 35px
+}
+#L{
+    width:500px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 268px;
+    left: 53px;
+}
+#rampa{
+    width:133px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 237px;
+    left: 108px;
+}
+#CentroA{
+    width:156px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 268px;
+    left: 108px;
+}
+#balcon{
+    width:76px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 288px;
+    left: 322px;
+}
+#banoHombres{
+    width:59px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 236px;
+    left: 274px;
+}
+#banoMujeres{
+    width:59px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 236px;
+    left:338px;
+}
+#cafeteria{
+    width:128px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 392px;
+    left:269px;
+}
+#recepcion{
+    width:72px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 319px;
+    left:479px;
+}
+#aseo{
+    width:25px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 235px;
+    left:401px;
+}
+#escalera1{
+    width:28px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 219px;
+    left:245px;
+}
+#escalera2{
+    width:30px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 270px;
+    left:219px;
+}
+#escalera3{
+    width:53px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 260px;
+    left:499px;
+}
+#esquina{
+    width:62px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 265px;
+    left:1160px;
+}
+#nomina{
+    width:79px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 391px;
+    left:401px;
+}
+#B201{
+    width:61px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 389px;
+    left:620px;
+}
+#B202{
+    width:61px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 389px;
+    left:713px;
+}
+#B203{
+    width:61px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 316px;
+    left:620px;
+}
+#B204{
+    width:61px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 316px;
+    left:712px;
+}
+#B205{
+    width:42px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 316px;
+    left:557px;
+}
+#B206{
+    width:57px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 389px;
+    left:557px;
+}
+#C201{
+    width:60px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 389px;
+    left:843px;
+}
+#C202{
+    width:60px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 389px;
+    left:934px;
+}
+#C203{
+    width:61px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 316px;
+    left:843px;
+}
+#C204{
+    width:61px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 316px;
+    left:934px;
+}
+#C205{
+    width:42px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 316px;
+    left:795px;
+}
+#C206{
+    width:57px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 389px;
+    left:780px;
+}
+#D201{
+    width:60px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 390px;
+    left:1066px;
+}
+#D202{
+    width:60px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 390px;
+    left:1161px;
+}
+#D203{
+    width:60px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 317px;
+    left:1066px;
+}
+#D204{
+    width:60px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 317px;
+    left:1161px;
+}
+#D205{
+    width:42px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 316px;
+    left:1017px;
+}
+#D206{
+    width:57px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 389px;
+    left:1003px;
+}

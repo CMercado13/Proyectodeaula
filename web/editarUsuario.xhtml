@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Modificar Información | Reses</title>
+        <link href="Estilos/modificarCSS.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"/>
+    </h:head>
+    <h:body>
+        <nav>
+            <img class="r" src="Images/R.png" alt=""/>
+            <a href="http://www.facebook.com" class="btnFacebook"><i class="fab fa-facebook-square"></i></a>
+            <a href="http://www.twitter.com" class="btnTwitter"><i class="fab fa-twitter-square"></i></a>
+            <a href="http://www.instagram.com" class="btnInstagram"><i class="fab fa-instagram"></i></a>
+            <a href="http://www.youtube.com" class="btnYoutube"><i class="fab fa-youtube"></i></a>
+            <a class="share"><i class="fas fa-question-circle"></i>&nbsp; Acerca de</a>
+            <a class="about"><i class="fas fa-share-alt-square"></i>&nbsp; Compartir</a>
+        </nav>
+        <h:form class="form">
+            <div style="padding-top: 2%;">
+                <p class="titulo">Editar Información</p>
+                <h:panelGrid columns="2" style="padding-left: 20%">
+                <p class="etiqueta">Correo: &nbsp; <h:inputText class="input1" id="correo" 
+                                                                value="#{UsuarioBean.correo}" required="true" a:placeholder="@" 
+                                                                title="#{login.cargarUsuario(usu).getCorreo()}">                                                    
+                                                   <f:validateRegex for="correo" pattern="([^.@]+)(\.[^.@]+)*@([^.@]+\.)+([^.@]+)" />
+                                                   </h:inputText></p>
+                <p class="etiqueta" id="codigo">Teléfono fijo: &nbsp; <h:inputText class="input1" id="tel"
+                                                                                  value="#{UsuarioBean.cod}">
+                                                                <f:validateLength for="tel" minimum="7" maximum="7"/>
+                                                    </h:inputText></p>
+                </h:panelGrid>    
+                <p class="mensaje">Estimad@ #{UsuarioBean.pedirNombre()} mantenga su información más reciente</p>
+                <h:commandButton id="restablecer" class="btn2"
+                                 value="Modificar" action="#{UsuarioBean.actualizar()}"/>                        
+            </div>
+        </h:form>
+        <footer>
+            <p class="IES">Esta plataforma es proporcionada actualmente para</p>
+            <img class="logo" src="Images/comfenalco.png" alt=""/>
+            <p class="idioma">Español (Colombia)</p>
+            <p class="copyright">Copyright  © 2018 - Todos los derechos reservados</p>
+        </footer>
+    </h:body>
+</html>

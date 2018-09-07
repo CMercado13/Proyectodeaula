@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Inicio | Reses</title>
+        <link href="Estilos/inicioCSS.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"/>
+    </h:head>
+    <h:body>
+        <h4><h:outputText escape="false" value=""/></h4>
+        <br/>
+        <h:form>
+            <div class="panel-lateral">
+                <a href="porfile.xhtml" class="userName">#{UsuarioBean.pedirNombre()}&nbsp;<i class="fas fa-user-circle"></i></a>
+                <a href="inicio.xhtml" class="actual">Inicio &nbsp; <i class="fas fa-home"></i> </a>
+                <a href="events.xhtml" class="opcion" id="opcion1">Eventos y Actividades &nbsp; <i class="fas fa-calendar-check"></i> </a>
+                <a href="friends.xhtml" class="opcion" id="opcion2">Amigos &nbsp; <i class="fas fa-hands-helping"></i> </a>
+                <a href="find a place.xhtml" class="opcion" id="opcion3">Encuentra un lugar &nbsp; <i class="fas fa-map-pin"></i> </a>
+                <a href="settings.xhtml" class="opcion" id="opcion4">Configuración &nbsp; <i class="fas fa-cogs"></i> </a>
+                <p class="cerrar"><h:commandLink action="login" actionListener="#{login.cerrarSesion()}" id="salir"
+                                  style="font-size: 20px;color: blue" value="Cerrar sesión"/> &nbsp; <i class="fas fa-power-off"></i></p>
+                
+            </div>
+            <div class="panel-central">
+<!--                <h:inputText class="barra-busqueda"></h:inputText>
+                <i class="fas fa-search"></i>-->
+                <div class="publicar">
+                    
+                </div>
+                <div class="publicaciones">
+                    <table class="publications">
+                        <!--Publicacion 8: curso relampago -->
+                        <tr>
+                            <td> Tecnologico Comfenalco</td>
+                            <td>26/05/2018</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2a">Curso Relampago</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><img src="https://goo.gl/4BHnpK" style="width: 550px" alt=""/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 25px"></td>
+                        </tr>
+                        <!--Publicacion 7: saber pro -->
+                        <tr>
+                            <td> Tecnologico Comfenalco</td>
+                            <td>25/05/2018</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2a">Atencion estudiantes </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><img src="https://goo.gl/vSUhor" style="width: 550px" alt=""/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 25px"></td>
+                        </tr>
+                        <!--Publicacion 6: bicentenario -->
+                        <tr>
+                            <td> Tecnologico Comfenalco</td>
+                            <td>25/05/2018</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2a">A partir del 8 al 14 de junio, se encontrará abierta 
+                                la convocatoria 2018-2 del Fondo Bicintenario</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><img src="https://goo.gl/7d3mYH" style="width: 550px" alt=""/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 25px" ></td>
+                        </tr>
+                        <!--Publicacion 5: aux -->
+                        <tr>
+                            <td> Tecnologico Comfenalco</td>
+                            <td>16/05/2018</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2a">Atención estudiantes de 3er semestre en adelante</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><img src="https://goo.gl/fRNs3P" style="width: 550px" alt=""/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 25px" ></td>
+                        </tr>
+                        <!--Publicacion 4: semana de idiomas -->
+                        <tr>
+                            <td> Tecnologico Comfenalco</td>
+                            <td>04/05/2018</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Semana de los idiomas, la cultura y la internacionalizacion</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><img src="https://goo.gl/NE46bw" style="width: 550px" alt=""/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 25px" ></td>
+                        </tr>
+                        <!--Publicacion 3: Vacaciones Productivas-->
+                        <tr>
+                            <td> Tecnologico Comfenalco</td>
+                            <td>30/04/2018</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Actualiza tus conocimientos con tecnologia de ultima generación</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><img src="https://goo.gl/PqE69G" style="width: 550px" alt=""/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 25px" ></td>
+                        </tr>
+                        <!--Publicacion 2: tecnobici-->
+                        <tr>
+
+                            <td> Tecnologico Comfenalco</td>
+                            <td>30/04/2018</td>
+                        </tr>
+                        <tr><td colspan="2">1ra travesía TecnoBici 2018 - ¡Anímate y Participa! Este domingo 06 de Mayo a las 6:00 a.m.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><img src="https://goo.gl/Rxjjjg" style="width: 550px" alt=""/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 25px" ></td>
+                        </tr>
+                        <!--Publicacion 1: inscripciones abiertas-->
+                        <tr>
+                            <td>Tecnologico Comfenalco</td><td>30/04/2018</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Matriculate con el 10% del valor de la matricula ¡INSCRIPCIONES ABIERTAS!</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><img src="https://goo.gl/nUhMLk" style="width: 550px" alt=""/></td>
+                        </tr>
+                        <tr><td colspan="2" style="height: 25px" ></td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="panel-derecho">
+
+            </div>
+        </h:form>
+    </h:body>
+</html>

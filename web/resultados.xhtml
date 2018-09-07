@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Resultados | Reses</title>
+        <link href="Estilos/resultadosCSS.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div class="panel-lateral">
+                <a href="porfile.xhtml" class="userName">#{UsuarioBean.pedirNombre()}&nbsp;<i class="fas fa-user-circle"></i></a>
+                <a href="inicio.xhtml" class="actual">Inicio &nbsp; <i class="fas fa-home"></i> </a>
+                <a href="events.xhtml" class="opcion" id="opcion1">Eventos y Actividades &nbsp; <i class="fas fa-calendar-check"></i> </a>
+                <a href="friends.xhtml" class="opcion" id="opcion2">Amigos &nbsp; <i class="fas fa-hands-helping"></i> </a>
+                <a href="find a place.xhtml" class="opcion" id="opcion3">Encuentra un lugar &nbsp; <i class="fas fa-map-pin"></i> </a>
+                <a href="settings.xhtml" class="opcion" id="opcion4">Configuración &nbsp; <i class="fas fa-cogs"></i> </a>
+                <p class="cerrar"><h:commandLink action="login" actionListener="#{login.cerrarSesion()}" id="salir"
+                                  style="font-size: 20px;color: blue" value="Cerrar sesión"/>&nbsp; <i class="fas fa-power-off"></i></p>
+            </div>
+            <div class="panel-central">
+                <div class="busqueda">
+                    <h:inputText class="barra-busqueda"></h:inputText>
+                    <i class="fas fa-search" id="icono-buscar"></i>
+                </div>
+                <div class="resultado">
+                    <p class="etiqueta">Resultados de la busqueda</p>
+                    <h:commandButton class="boton1" value="Buscar Solo Eventos"></h:commandButton>
+                    <h:commandButton class="boton2" value="Buscar Solo Amigos"></h:commandButton>
+                </div>
+                    
+            </div>
+        </h:form>
+    </h:body>
+</html>
